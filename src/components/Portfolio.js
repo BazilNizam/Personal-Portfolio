@@ -35,23 +35,27 @@ const projects = [
     help of tmdb api and axios, checked api working with postman, used custom fonts, 
     designed layout using css `,
     image: project1,
+    link: `https://unruffled-jennings-854144.netlify.app/`,
   },
   {
     name: "Todo App",
     description: `Todo App using react.js and added animations with the help of css, fully function ui,
     designed with help of font awsome icons and fonts, created todos will be saved locally.`,
     image: project2,
+    link: `https://todobazilnizam.netlify.app/`,
   },
   {
     name: "Task App",
     description: `Task App using react.js and added animations with the help of css, fully function ui,
     designed with update options, created todos will be saved, used react hooks`,
     image: project3,
+    link: `https://github.com/BazilNizam/Task-App`,
   },
   {
     name: "Amazon Clone",
     description: `Amazon clone build with react.js, redux and integrated with stripe and firebase,Designed all elements with raw css`,
     image: project4,
+    link: `https://github.com/BazilNizam/Amazon-Clone`,
   },
   // {
   //   name: "Project 5",
@@ -100,7 +104,7 @@ const Portfolio = () => {
                 {/* <Button size="small" color="primary">
                   Share
                 </Button> */}
-                <Button onsize="small" color="primary">
+                <Button href={project.link} onsize="small" color="primary">
                   Live Demo
                 </Button>
               </CardActions>
