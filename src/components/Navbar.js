@@ -94,7 +94,7 @@ const Navbar = () => {
               <ArrowBack className={classes.arrow} />
             </IconButton>
             <Typography variant="h5" className={classes.title}>
-              Portfolio
+              Profile
             </Typography>
           </Toolbar>
         </AppBar>

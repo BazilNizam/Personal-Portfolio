@@ -30,53 +30,45 @@ const useStyles = makeStyles((theme) => ({
 
 const projects = [
   {
-    name: "Project 1",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
-    consequatur magni quod nesciunt necessitatibus molestiae non
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus
-    iste alias sunt veritatis nisi dolores!`,
+    name: "Netflix Clone",
+    description: `Responsive netflix clone created with react with the 
+    help of tmdb api and axios, checked api working with postman, used custom fonts, 
+    designed layout using css `,
     image: project1,
   },
   {
-    name: "Project 2",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
+    name: "Todo App",
+    description: `Todo App using react.js and added animations with the help of css, fully function ui,
+    designed with help of font awsome icons and fonts, created todos will be saved locally.`,
     image: project2,
   },
   {
-    name: "Project 3",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
+    name: "Task App",
+    description: `Task App using react.js and added animations with the help of css, fully function ui,
+    designed with update options, created todos will be saved, used react hooks`,
     image: project3,
   },
   {
-    name: "Project 4",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
+    name: "Amazon Clone",
+    description: `Amazon clone build with react.js, redux and integrated with stripe and firebase,Designed all elements with raw css`,
     image: project4,
   },
-  {
-    name: "Project 5",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
-    image: project5,
-  },
-  {
-    name: "Project 6",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
-    image: project6,
-  },
+  // {
+  //   name: "Project 5",
+  //   description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
+  //   consequatur magni quod nesciunt necessitatibus molestiae non\
+  //   eligendi, magnam est aliquam recusandae? Magnam soluta minus\
+  //   iste alias sunt veritatis nisi dolores!`,
+  //   image: project5,
+  // },
+  // {
+  //   name: "Project 6",
+  //   description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
+  //   consequatur magni quod nesciunt necessitatibus molestiae non\
+  //   eligendi, magnam est aliquam recusandae? Magnam soluta minus\
+  //   iste alias sunt veritatis nisi dolores!`,
+  //   image: project6,
+  // },
 ];
 
 const Portfolio = () => {
@@ -105,10 +97,10 @@ const Portfolio = () => {
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button size="small" color="primary">
+                {/* <Button size="small" color="primary">
                   Share
-                </Button>
-                <Button size="small" color="primary">
+                </Button> */}
+                <Button onsize="small" color="primary">
                   Live Demo
                 </Button>
               </CardActions>
