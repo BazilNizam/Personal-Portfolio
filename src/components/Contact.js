@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import TextField from "@material-ui/core/TextField";
@@ -7,6 +7,7 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 
 import Send from "@material-ui/icons/Send";
+import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
   contactContainer: {
@@ -62,36 +63,71 @@ const InputField = withStyles({
 })(TextField);
 
 const Contact = () => {
+  const [state, setState] = useState({
+    Name: "",
+    Email: "",
+    Message: "",
+  });
+
+  const handleChange = (e) => {
+    setState({
+      ...state,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    console.log(state);
+    axios
+      .post(
+        "https://script.google.com/macros/s/AKfycbysNWBexwZSFAQaca7GobqC0LVndt7gUL_GDD0joaRYmGmgy279FFU2bxL4o1BpPXBT/exec",
+        state
+      )
+      .then((response) => {
+        console.log(response);
+      });
+  };
   const classes = useStyles();
   return (
     <Box component="div" className={classes.contactContainer}>
       <Grid container justify="center">
-        <Box component="form" className={classes.form}>
+        <Box component="form" className={classes.form} onSubmit={submitHandler}>
           <Typography variant="h5" className={classes.heading}>
             Hire or Contact me...
           </Typography>
           <InputField
+            name="Name"
             fullWidth={true}
             label="Name"
             variant="outlined"
             inputProps={{ className: classes.input }}
+            value={state.Name}
+            onChange={handleChange}
           />
           <InputField
             fullWidth={true}
+            name="Email"
             label="Email"
             variant="outlined"
             inputProps={{ className: classes.input }}
             className={classes.field}
+            value={state.Email}
+            onChange={handleChange}
           />
           <InputField
+            name="Message"
             fullWidth={true}
             label="Message"
             variant="outlined"
             multiline
             rows={4}
             inputProps={{ className: classes.input }}
+            value={state.Message}
+            onChange={handleChange}
           />
           <Button
+            onClick={submitHandler}
             variant="outlined"
             fullWidth={true}
             endIcon={<Send />}

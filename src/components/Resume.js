@@ -4,6 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import { Link } from "react-router-dom";
 
+
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
     background: "#233",
@@ -113,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
 const Resume = () => {
   const classes = useStyles();
   return (
-    <Box component="header" className={classes.mainContainer}>
+    <Box  component="header" className={classes.mainContainer} >
       <Typography variant="h4" align="center" className={classes.heading}>
         Working Experience
       </Typography>
