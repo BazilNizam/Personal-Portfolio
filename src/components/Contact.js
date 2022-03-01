@@ -61,7 +61,7 @@ const InputField = withStyles({
   },
 })(TextField);
 
-const Contact = () => {
+const Contact = (e) => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -73,13 +73,18 @@ const Contact = () => {
       }, (error) => {
           console.log(error.text);
       });
+
+
+      document.getElementById("form").reset();
   };
 
+  
+  
   const classes = useStyles();
   return (
     <Box component="div" className={classes.contactContainer}>
       <Grid container justify="center">
-        <Box component="form" className={classes.form} ref={form} >
+        <Box id ="form" component="form" className={classes.form} ref={form} >
           <Typography variant="h5" className={classes.heading}>
             Hire or Contact me...
           </Typography>
@@ -89,6 +94,7 @@ const Contact = () => {
             name="name"
             variant="outlined"
             inputProps={{ className: classes.input }}
+            
           />
           <InputField
             fullWidth={true}
@@ -97,6 +103,7 @@ const Contact = () => {
             variant="outlined"
             inputProps={{ className: classes.input }}
             className={classes.field}
+            
           />
           <InputField
             fullWidth={true}
@@ -106,6 +113,7 @@ const Contact = () => {
             multiline
             rows={4}
             inputProps={{ className: classes.input }}
+            
           />
           <Button
             variant="outlined"
@@ -120,6 +128,7 @@ const Contact = () => {
       </Grid>
     </Box>
   );
+  
 };
 
 export default Contact;
