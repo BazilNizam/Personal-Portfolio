@@ -5,7 +5,7 @@ import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 import Send from "@material-ui/icons/Send";
 
 const useStyles = makeStyles((theme) => ({
@@ -67,24 +67,30 @@ const Contact = (e) => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_8da5h1p', 'template_2i6xapm', form.current, 'h8FGI2TY2sp7ux66R')
-      .then((result) => {
+    emailjs
+      .sendForm(
+        "service_dzw41zs",
+        "template_2i6xapm",
+        form.current,
+        "h8FGI2TY2sp7ux66R"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
-      }, (error) => {
+        },
+        (error) => {
           console.log(error.text);
-      });
+        }
+      );
 
-
-      document.getElementById("form").reset();
+    document.getElementById("form").reset();
   };
 
-  
-  
   const classes = useStyles();
   return (
     <Box component="div" className={classes.contactContainer}>
       <Grid container justify="center">
-        <Box id ="form" component="form" className={classes.form} ref={form} >
+        <Box id="form" component="form" className={classes.form} ref={form}>
           <Typography variant="h5" className={classes.heading}>
             Hire or Contact me...
           </Typography>
@@ -94,7 +100,6 @@ const Contact = (e) => {
             name="name"
             variant="outlined"
             inputProps={{ className: classes.input }}
-            
           />
           <InputField
             fullWidth={true}
@@ -103,7 +108,6 @@ const Contact = (e) => {
             variant="outlined"
             inputProps={{ className: classes.input }}
             className={classes.field}
-            
           />
           <InputField
             fullWidth={true}
@@ -113,7 +117,6 @@ const Contact = (e) => {
             multiline
             rows={4}
             inputProps={{ className: classes.input }}
-            
           />
           <Button
             variant="outlined"
@@ -128,7 +131,6 @@ const Contact = (e) => {
       </Grid>
     </Box>
   );
-  
 };
 
 export default Contact;

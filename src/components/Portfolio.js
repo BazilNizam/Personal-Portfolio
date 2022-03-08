@@ -35,7 +35,7 @@ const projects = [
     help of tmdb api and axios, checked api working with postman, used custom fonts, 
     designed layout using css `,
     image: project1,
-    link: `https://unruffled-jennings-854144.netlify.app/`,
+    link: `https://netflix-clone-bz.netlify.app/`,
   },
   {
     name: "Todo App",
