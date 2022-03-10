@@ -14,6 +14,7 @@ import project1 from "../images/html-css-javascript-lg.jpg";
 import project2 from "../images/html-css-javascript.jpg";
 import project3 from "../images/javascript-fullstack.jpg";
 import project4 from "../images/mern-stack.jpg";
+import project5 from "../images/uber.png";
 // import project5 from "../images/react-redux.jpg";
 // import project6 from "../images/react.png";
 
@@ -36,6 +37,13 @@ const projects = [
     designed layout using css `,
     image: project1,
     link: `https://netflix-clone-bz.netlify.app/`,
+  },
+  {
+    name: "Uber CLone Clone",
+    description: `Uber clone done in Next.js which works very well mobile screen size, with firebase authentication for signing in 
+                   with google account, designed and animated app with tailwind css`,
+    image: project5,
+    link: `https://github.com/BazilNizam/Uber-clone`,
   },
   {
     name: "Todo App",
