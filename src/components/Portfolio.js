@@ -113,7 +113,7 @@ const Portfolio = () => {
                   Share
                 </Button> */}
                 <Button href={project.link} onsize="small" color="primary">
-                  Live Demo
+                  See the project
                 </Button>
               </CardActions>
             </Card>
