@@ -39,11 +39,11 @@ const projects = [
     link: `https://netflix-clone-bz.netlify.app/`,
   },
   {
-    name: "Uber CLone Clone",
+    name: "Uber Clone",
     description: `Uber clone done in Next.js which works very well mobile screen size, with firebase authentication for signing in 
                    with google account, designed and animated app with tailwind css`,
     image: project5,
-    link: `https://github.com/BazilNizam/Uber-clone`,
+    link: `https://uber-clone-bazil.vercel.app/Login`,
   },
   {
     name: "Todo App",
